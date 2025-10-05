@@ -8,7 +8,7 @@ export default function AddNote() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://backend:5000/backend/note", {
+    const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, content })
