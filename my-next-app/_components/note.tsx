@@ -1,5 +1,10 @@
 "use client"
-export default function NoteCard({ title, content }) {
+interface NoteCardProps {
+  title: string;
+  content: string;
+}
+
+export default function NoteCard({ title, content }: NoteCardProps) {
   return (
     <div style={{
       border: "1px solid #ccc",
